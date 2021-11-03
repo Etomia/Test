@@ -3,7 +3,6 @@ let sec = 0;
 let min = 0;
 
 function startTest(){
-    //document.getElementById('timer').innerHTML = "000000000000000000000000";
     if(stoptime){
         stoptime = false;
         timercycle();
@@ -25,3 +24,8 @@ function timercycle(){
 
     setTimeout("timercycle()", 1000);
 }
+
+function stopTest(){
+    stoptime = true;
+}
+
