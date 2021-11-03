@@ -15,24 +15,45 @@
 
     </script>
     <div class="container-fluid p-5 bg-primary text-white text-center">
-        <h1>Trykk på Start For å begynne testen</h1>
-        <button onclick="startTest()" class="button">Start</button>
-        <div id="timer" class=""> blubb</div>
+        <h1>Prosjekt 3, Checkbox</h1>
     </div>
-    <main>
-        <div class="container-fluid p-5 text-center">
-            <div class="row">
-                <div class="col"></div>
-                <div class="col-sm-6">
-                    <input type="checkbox" id="jaa" value="jaa">
-                    <label for="jaa">jaa</label>
-                    <button onclick="stopTest()">Stopp</button>
-                </div>
-                <div class="col"></div>
-            </div>
-        </div>
+    <div class="container-fluid p-5 ">
+       <div class="container-fluid p-5 text-center ">
+        <button onclick="startTest()" class="button btn-primary" >Start</button>
+        <div id="timer" class=""> 0 : 0.0</div>
+           </div>
+        <table class="table table-hover text-center">
+            <thead>
+            <tr>
+                <th>Ordet</th>
+                <th>Kryss av ritkig</th>
 
-    </main>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>John</td>
+                <td><input type="checkbox" id="jaa" value="jaa"></td>
+
+            </tr>
+            <tr>
+                <td>Johonna</td>
+                <td><input type="checkbox" id="jaa" value="jaa"></td>
+
+            </tr>
+            <tr>
+                <td>Johny</td>
+                <td><input type="checkbox" id="jaa" value="jaa"></td>
+
+            </tr>
+            </tbody>
+        </table>
+        <div class="container-fluid p-5 text-center ">
+        <button onclick="stopTest()" class="button btn-danger">Stopp</button>
+        </div>
+    </div>
 
 </body>
 </html>
+
+
