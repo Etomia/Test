@@ -1,4 +1,5 @@
 let stoptime = true;
+let deciSec = 0;
 let sec = 0;
 let min = 0;
 
@@ -13,16 +14,21 @@ function timercycle(){
     if(stoptime){
         return;
     }
-    sec++;
+    deciSec++;
+
+    if(deciSec === 10){
+        sec++;
+        deciSec = 0;
+    }
 
     if(sec === 60 ){
         min ++;
         sec = 0;
     }
 
-    document.getElementById('timer').innerHTML = min + " : " + sec;
+    document.getElementById('timer').innerHTML = min + " : " + sec + "." + deciSec;
 
-    setTimeout("timercycle()", 1000);
+    setTimeout("timercycle()", 100);
 }
 
 function stopTest(){
