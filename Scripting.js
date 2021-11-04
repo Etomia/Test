@@ -43,6 +43,38 @@ function generateCode(){
     document.getElementById("testMainBody").innerHTML = out;
 }
 
+function generateCodeA(){
+    let out = "";
+
+    for(let i = 0; i < 20; i++){
+        let j = Math.floor(Math.random() * 50);
+        if(randArray[j]%2 === 0){
+            fasitArray[i] = true; //sjekk av alle som er partall
+        }
+
+        console.log(randArray[j] + " - " + fasitArray[i]);
+
+        out += "<tr>\n" +
+            "                <td>"+randArray[j]+"</td>\n" +
+            "                <td>\n" +
+            "                    <input type=\"checkbox\" id=\"checkBox" + (i + 1) + "\" ";
+
+        let k = Math.floor(Math.random()*100);
+
+        if(k % 2 === 0){
+            out += "checked";
+        }
+
+        out += "/>\n" +
+            "                </td>\n" +
+            "            </tr>";
+    }
+
+    console.log(fasitArray.toString());
+
+    document.getElementById("testMainBody").innerHTML = out;
+}
+
 function resultCheck(){
 
     for(let i =0; i < 20; i++){
@@ -57,12 +89,34 @@ function resultCheck(){
     document.getElementById("result").innerHTML = "Antall feil: " + wrongNr;
 }
 
+function resultCheckA(){
+
+    for(let i =0; i < 20; i++){
+        if((document.getElementById(("checkBox" + (i+1))).checked && !fasitArray[i])){
+            wrongNr ++;
+        }else if((!document.getElementById(("checkBox" + (i+1))).checked && fasitArray[i])){
+            wrongNr ++;
+        }
+
+        console.log(document.getElementById(("checkBox" + (i+1))).checked + " - " + fasitArray[i]);
+    }
+    document.getElementById("result").innerHTML = "Antall feil: " + wrongNr;
+}
+
 function startTest(){
     if(stoptime){
         stoptime = false;
         timercycle();
     }
     generateCode();
+}
+
+function startTestA(){
+    if(stoptime){
+        stoptime = false;
+        timercycle();
+    }
+    generateCodeA();
 }
 
 function timercycle(){
@@ -84,6 +138,12 @@ function timercycle(){
     document.getElementById('timer').innerHTML = min + " : " + sec + "." + deciSec;
 
     setTimeout("timercycle()", 100);
+}
+
+function stopTestA(){
+    resultCheckA();
+    stoptime = true;
+    wrongNr = 0;
 }
 
 function stopTest(){

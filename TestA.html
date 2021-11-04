@@ -6,147 +6,47 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="Style.css" rel="stylesheet">
+
     <meta charset="UTF-8">
     <title>TestA</title>
 
 
 </head>
 <body>
-    <script src="Scripting.js">
+<script src="Scripting.js">
 
-    </script>
-    <div class="container-fluid p-5 bg-primary text-white text-center">
-        <h1>Prosjekt 3, Checkbox</h1>
-    </div>
-    <div class="container-fluid p-5 ">
-       <div class="container-fluid p-5 text-center ">
-        <button onclick="startTest()" class="button btn-primary" >Start</button>
+</script>
+<div class="container-fluid p-5 bg-primary text-white text-center">
+    <h1>Prosjekt 3, Checkbox Test A</h1>
+</div>
+<div class="container-fluid p-5 ">
+    <div class="container-fluid p-5 text-center ">
+        <button onclick="startTestA()" class="button btn-primary" >Start</button>
         <div id="timer" class=""> 0 : 0.0</div>
-           </div>
-        <table class="table table-hover text-center">
-            <thead>
-            <tr>
-                <th>Ordet</th>
-                <th>Kryss av ritkig</th>
-            </tr>
-            </thead>
-            <tbody>
+    </div>
+    <table class="table table-hover text-center">
+        <thead>
+        <tr>
+            <th>Tallet</th>
+            <th>Kryss av partall</th>
+        </tr>
+        </thead>
+        <tbody id="testMainBody">
             <tr>
                 <td>John</td>
                 <td>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
-                        <label class="custom-control-label" for="customSwitch1"> </label>
-                    </div>
+                    <input type="checkbox" id="checkBox"/>
                 </td>
             </tr>
-            <tr>
-                <td>Johonna</td>
-                <td>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
-                        <label class="custom-control-label" for="customSwitch2"> </label>
-                    </div>
-                </td>
-
-            </tr>
-            <tr>
-                <td>Johny</td>
-                <td>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
-                        <label class="custom-control-label" for="customSwitch3"> </label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Johny</td>
-                <td>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
-                        <label class="custom-control-label" for="customSwitch2"> </label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Johny</td>
-                <td>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
-                        <label class="custom-control-label" for="customSwitch2"> </label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Johny</td>
-                <td>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
-                        <label class="custom-control-label" for="customSwitch2"> </label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Johny</td>
-                <td>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
-                        <label class="custom-control-label" for="customSwitch2"> </label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Johny</td>
-                <td>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
-                        <label class="custom-control-label" for="customSwitch2"> </label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Johny</td>
-                <td>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
-                        <label class="custom-control-label" for="customSwitch2"> </label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Johny</td>
-                <td>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
-                        <label class="custom-control-label" for="customSwitch2"> </label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Johny</td>
-                <td>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
-                        <label class="custom-control-label" for="customSwitch2"> </label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Johny</td>
-                <td>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
-                        <label class="custom-control-label" for="customSwitch2"> </label>
-                    </div>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <div class="container-fluid p-5 text-center ">
-            <button onclick="stopTest()" class="button btn-danger">Stopp</button>
-        </div>
-        <a href="Index.html"><button type="button" class="btn btn-primary">Til Hovedsiden</button></a>
+        </tbody>
+    </table>
+    <div class="container-fluid p-5 text-center ">
+        <button onclick="stopTestA()" class="button btn-danger">Stopp</button>
     </div>
+    <div class="alert-danger" id="result">
+    </div>
+    <a href="Index.html"><button type="button" class="btn btn-primary">Til Hovedsiden</button></a>
+</div>
 
 </body>
 </html>
