@@ -107,16 +107,16 @@ function startTest(){
     if(stoptime){
         stoptime = false;
         timercycle();
+        generateCode();
     }
-    generateCode();
 }
 
 function startTestA(){
     if(stoptime){
         stoptime = false;
         timercycle();
+        generateCodeA();
     }
-    generateCodeA();
 }
 
 function timercycle(){
